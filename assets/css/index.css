@@ -1,0 +1,79 @@
+@import url("./reset.css");
+
+main {
+    height: 100vh;
+    background-color: #F6F7F9;
+    color: #000;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-box{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+}
+
+.title {
+    margin-top: 70PX;
+    font-size: 34px;
+    color: #3E9DFD;
+    margin-bottom: 15PX;
+}
+
+.user-input input {
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #F6F7F9;
+    padding: 10PX;
+    margin-bottom: 15PX;
+}
+
+.login {
+    cursor: pointer;
+    padding: 5PX 25PX;
+    width: 150px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #3E9DFD;
+    border: 1px solid #3E9DFD;
+    margin:auto;
+}
+
+.sign {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.sign-btn {
+    margin:auto;
+    float: center;
+    cursor: pointer;
+    padding: 5PX 25PX;
+    width: 150px;
+    color: #3E9DFD;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #3E9DFD;
+}
+
+.tips {
+    display: none;
+    color: rgb(216, 16, 16);
+    font-size: 20px;
+}
