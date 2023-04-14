@@ -4,7 +4,8 @@ const myImg = document.querySelector('.my-img');
 const userInfo = document.querySelector('.user-info');
 const imgName = document.querySelector('.img-name');
 const rbTitle = document.querySelector('.box-3');
-
+const boxTwo = document.querySelector('.box-2');
+const threeFlex = document.querySelector('.three-flex');
 
 const postBtn = document.querySelector('.rel-post');
 const textareaInput = document.querySelector('textarea');
@@ -126,7 +127,6 @@ reader.onload = function () {
 
 function makediv(array) {
     jsBox.innerHTML = '';
-    //console.log(array)
     array.forEach(element => {
         const contactDiv = document.createElement("div");
         contactDiv.className = "white-box";
@@ -155,7 +155,6 @@ postBtn.addEventListener('click', () => {
         const user = new User('001','Yifan Jiao','Yifan','jiao1995cn@gmail.com',dates,textareaInput.value.trim(),imgSrc);
         contactsArray.unshift(user);
     }
-    //console.log(contactsArray)
     imgName.innerHTML = '';
     imgSrc = '';
     makediv(contactsArray);
@@ -179,7 +178,6 @@ async function getUser() {
             throw new Error(`${response.statusText}: ${response.status}`);
         }
         const data = await response.json();
-        //console.log(data.results[2])
 
         data.results.forEach(element => {
             const usertDiv = document.createElement("div");
@@ -198,9 +196,8 @@ async function getUser() {
                                   <div class="fu-plus">
                                     +
                                   </div>`
-                rbTitle.appendChild(usertDiv);
+            rbTitle.appendChild(usertDiv);
         });
-
     } catch(error) {
         console.log(error.message);
     }
